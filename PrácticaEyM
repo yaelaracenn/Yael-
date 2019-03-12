@@ -1,80 +1,57 @@
-% ****** Start of file apssamp.tex ******
-%
-%   This file is part of the APS files in the REVTeX 4.1 distribution.
-%   Version 4.1r of REVTeX, August 2010
-%
-%   Copyright (c) 2009, 2010 The American Physical Society.
-%
-%   See the REVTeX 4 README file for restrictions and more information.
-%
-% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
-% as well as the rest of the prerequisites for REVTeX 4.1
-%
-% See the REVTeX 4 README file
-% It also requires running BibTeX. The commands are as follows:
-%
-%  1)  latex apssamp.tex
-%  2)  bibtex apssamp
-%  3)  latex apssamp.tex
-%  4)  latex apssamp.tex
-%
-\documentclass[%
- reprint,
-%superscriptaddress,
-%groupedaddress,
-%unsortedaddress,
-%runinaddress,
-%frontmatterverbose, 
-%preprint,
-%showpacs,preprintnumbers,
-%nofootinbib,
-%nobibnotes,
-%bibnotes,
- amsmath,amssymb,
- aps,
-%pra,
-%prb,
-%rmp,
-%prstab,
-%prstper,
-%floatfix,
-]{revtex4-1}
 
+\documentclass[reprint, amsmath, amssymb, aps,]{revtex4-1}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-\usepackage{graphicx}% Include figure files
-\usepackage{dcolumn}% Align table columns on decimal point
-\usepackage{bm}% bold math
-%\usepackage{hyperref}% add hypertext capabilities
-%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
-%\linenumbers\relax % Commence numbering lines
-
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
-%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
-%%text={7in,10in},centering,
-%%margin=1.5in,
-%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
-%%height=10in,a5paper,hmargin={3cm,0.8in},
-%]{geometry}
-
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{amssymb, amsmath, amsbsy}
+\usepackage{upgreek}
+\usepackage{cancel}
+\usepackage{mathdots}
+\usepackage{mathrsfs}
+\usepackage{stackrel}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{afterpage}
+\lhead{2CM13 - Laboratorio de Electricidad y Magnetismo }
+\chead{}
+\rhead{Práctica 3.}	% Aquí va el numero de experimento, al igual que en el titulo
+\lfoot{Escuela Superior de Ingeniería Mecánica y Eléctrica}
+\cfoot{\thepage\ de \pageref{LastPage}}
+\rfoot{Instituto Politécnico Nacional }
 \begin{document}
 
-%\preprint{APS/123-QED}
+\title{Practica 1.- ELECTROSTÁTICA}
 
-\title{Practica 1.- ELECTROSTATICA}% Force line breaks with \\
-\thanks{A footnote to the article title}%
 
-\author{Barragan Valdez Alan Daniel, Carlos Gil Valeria, Corona Téllez Lizbeth Johana, \\ González Aracén Yael Magdiel, Mejorado López Jonathan, Minor Acoltzi \\ Cristian Eduardo, Mora Moreno Mariana Lizeth, Romero Méndez Jesús Esaú, \\ \\ \\  }
+\author{Barragán Valdéz Alan Daniel, Carlos Gil Valeria \\ González Aracén Yael Magdiel, Mejorado López Jonathan, \\López Canales Iván Salvador, Romero Méndez Jesús Esaú, \\ \\ \\  }
 
 
 
 \begin{abstract}
 
-\section{\label{sec:level1}Resumen:}
- Vivimos en un océano electromagnético natural, todo lo que nos rodea está constituido por materia, que es aquello que posee masa y ocupa un lugar en el espacio. Los átomos son las partículas más pequeñas de la materia, estos están constituidos por electrones y protones que tienen una carga eléctrica; por lo tanto, la carga eléctrica es una propiedad intrínseca de la materia, al igual que lo es la masa. \\
- La electroestática es la rama de la Física que estudia las interacciones entre cuerpos cargados eléctricamente que se encuentran en resposo. \\
- En esta práctica, mediante diversos experimentos con distintos materiales vamos a aprender acerca de los distintos métodos de electrizacíon; que son por inducción, contacto y frotamiento.  \\
- Con esto estudiaremos los fundamentos y leyes que gobiernan la electricidad.
+\section{\label{sec:level1}Resumen.}
+Un multímetro, a veces también denominado polímetro o tester, es un instrumento de medida que ofrece la posibilidad de medir distintos parámetros eléctricos y magnitudes en el mismo aparato. Las más comunes son las de voltímetro, amperímetro y óhmetro. Es utilizado frecuentemente por personal en toda la gama de electrónica y electricidad.
+Un multímetro tiene muchas funciones. A modo general sirve para medir distintas magnitudes en un circuito eléctrico. Algunas de las funciones de este son:
+\begin{itemize}
+    \item Medición de resistencia.
+    \item Prueba de continuidad.
+    \item Mediciones de tensiones de Corriente Alterna y Corriente Continua.
+    \item Mediciones de intensidad de corrientes alterna y continua.
+    \item Medición de la capacitancia.
+    \item Medición de la frecuencia.
+    \item Detección de la presencia de corriente alterna.
+\end{itemize}
+\textbf{¿Cómo funciona el multímetro?}\\
+El funcionamiento de un multímetro involucra varios instrumentos de medición, como el voltímetro, amperímetro, entre otros. 
+En principio debemos identificar que vamos a medir y tener una idea de entre que valores oscila esa medición. Una vez identificados buscamos en la escala del tester los datos. Por ejemplo, si queremos medir voltaje de una corriente continua de 100 V, buscamos en el tester la V que al lado tiene una rayita continua y elegimos el valor más grande, más cercano al valor aproximado de medición.
+Luego se deben conectar los cables al multímetro. El cable negro debe ir conectado en la clavija que tiene denominación COM, de común. Luego buscamos la clavija que tiene como denominación la magnitud que queremos medir. Si queremos medir voltaje, buscamos la V y conectamos el cable en esa clavija. Luego se deben conectar las otras terminales de los cables, el negro en la parte negativa del circuito y el rojo en la parte positiva del circuito.
+ Si él multímetro es digital mostrará el valor en la pantalla y en caso de que sea analógico, la aguja se moverá al valor de la medición. \\
+
 \end{abstract}
 
 
@@ -82,90 +59,319 @@
 
 %\tableofcontents
 
-\section{\label{sec:level1}Objetivo}
+\section{\label{sec:level1}Objetivo.}
+\begin{itemize}
+\item Obtención de conocimientos básicos del multímetro para futuras prácticas que tengan que ver con el uso del mismo.
+\item Conocer las partes del multímetro y que función cumplen.
+\item Saber el apropiado manejo para realizar las mediciones.
+\item Diferenciar entre un multímetro analógico y un multímetro digital.
+\item Interactuar las distintas mediciones que se pueden realizar a dichas magnitudes (voltaje, potencia e intensidad).
+\item Saber cómo realizar mediciones correctamente de amperaje, voltaje y corriente para diversas ocasiones.
+\end{itemize}
 
 
 
-\section{\label{sec:level1}Desarrollo Experimetal}
+\section{\label{sec:level1}Materiales.}
+\begin{itemize}
+\item 1 Multímetro digital
+\item 1 Multímetro Analógico.
+\item 1 Pila tipo "D" de 1.5 V.
+\item 1 Pila de valor desconocido.
+\item 1 Protoboard.
+\item 3 Jumper (Macho-Macho).
+\item 2 Jumper (Hembra-Macho).
+\item 2 Cables "caimán-banana".
+\item 2 Cables "banana-banana".
+\item 1 Fuente de alimentación regulada.
+\item 6 Resistencias de carbón de k$\Omega$.
 
-This file may be formatted in either the \texttt{preprint} or
-\texttt{reprint} style. \texttt{reprint} format mimics final journal output. 
-Either format may be used for submission purposes. \texttt{letter} sized paper should
-be used when submitting to APS journals.
+\end{itemize}
 
-\subsubsection{Wide text (A level-3 head)}
-The \texttt{widetext} environment will make the text the width of the
-full page, as on page~\pageref{eq:wideeq}. (Note the use the
-\verb+\pageref{#1}+ command to refer to the page number.) 
-\paragraph{Note (Fourth-level head is run in)}
-The width-changing commands only take effect in two-column formatting. 
-There is no effect if text is in a single column.
+\section{\label{sec:level1}Teoría.}
+\subsubsection{Multímetro}
+Un multímetro es un instrumento que permite medir directamente magnitudes eléctricas activas como corrientes y diferencia de potenciales o pasivas como resistencias, capacidades y otras. Las medidas pueden realizarse para corriente continua o alterna.
+El multímetro digital tiene por cumplir esta función, pero a diferencia de que puede contar con numerosas funciones especiales, pero esencialmente mide voltios, ohmios y amperios.
+\subsubsection{Ley de Ohm.}
+La tensión, corriente y resistencia de cualquier circuito eléctrico se puede calcular mediante la ley de Ohm, que establece que la tensión es igual a corriente por resistencia (consulte la Figura 1). Por lo tanto, si se conocen dos valores en la fórmula, el tercero puede determinarse. Un multímetro digital utiliza la ley de Ohm para medir y mostrar directamente ohmios, amperios o voltios.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.2\textwidth]{ley.png}
+        \caption* \\ Ley de Ohm.
+        \label{fig1}
+    \end{figure}
+    
+\subsubsection{Resistencia (óhmetro.)}
+La resistencia se mide en ohmios $\Omega$. Los valores de resistencia pueden variar enormemente, desde unos pocos miliohmios ($m\Omega$) para la resistencia del contacto hasta miles de millones de ohmios para aisladores. La mayoría de los multímetros digitales pueden medir como mínimo hasta $0,1 \Omega$ y algunos un máximo de hasta $300 M\Omega$ (300.000.000 ohmios). La resistencia infinita (circuito abierto) se lee como $"OL"$ en la pantalla del multímetro Fluke y significa que la resistencia es superior a la que puede medir el multímetro. Las mediciones de resistencia deben realizarse con el circuito apagado, en caso contrario, el multímetro o el circuito podrían resultar dañados. Algunos multímetros digitales proporcionan protección en el modo de ohmios en caso de contacto accidental con las tensiones.
+El nivel de protección puede variar enormemente entre los distintos modelos de multímetros digitales. Para obtener mediciones precisas de resistencia baja, la resistencia en los cables de prueba debe restarse de la resistencia total medida. La resistencia normal en un cable de prueba está comprendida entre $0,2 \Omega$ y $0,5 \Omega$. Si la resistencia en los cables de prueba es superior a $1 \Omega$, los cables de prueba deberían sustituirse. Si el multímetro digital suministra menos de $0,6 V$ de tensión de $CC$ de prueba para medir la resistencia, será capaz de medir los valores de las resistencias que estén aisladas en un circuito mediante uniones semiconductoras y diodos. Esto a menudo le permite probar las resistencias de una placa de circuitos sin tener que retirar sus soldaduras. 
 
-\subsection{\label{sec:citeref}Citations and References}
-A citation in text uses the command \verb+\cite{#1}+ or
-\verb+\onlinecite{#1}+ and refers to an entry in the bibliography. 
-An entry in the bibliography is a reference to another document.
+\subsubsection{Medición de resistencia.}
+\begin{itemize}
+    \item[$1.$] Desconecte el suministro eléctrico al circuito.
+    \item[$2.$] Seleccione la resistencia ($\Omega$).
+    \item[$3.$] Conecte la sonda de prueba negra en la entrada de clavija
+    $COM$. Conecte la sonda de prueba roja en la entrada de clavija $\Omega$.
+    \item[$4.$] Conecte las puntas de las sondas en el componente o sección del circuito donde desee determinar la resistencia.
+    \item[$5.$] Observe la lectura, asegurándose de tener en cuenta la unidad de medición: ohmios ($\Omega$), kilohmios ($k\Omega$)o megaohmios ($M\Omega$).
+\end{itemize}
+\textbf{Nota: $1.000 \Omega$ = $1 k\Omega$; $1.000.000 Ω = 1 M\Omega$
+Antes de efectuar las medidas de resistencia, asegúrese de que se ha desconectado la fuente de alimentación.
+}
+\subsubsection{Medición de corriente.}
+Las medidas de corriente son diferentes de otras medidas de multímetros digitales. Las medidas de corriente tomadas únicamente con el multímetro digital precisan que el multímetro se coloque en serie con el circuito que se va a medir. Esto quiere decir abrir el circuito y utilizar los cables de prueba del multímetro digital para completar el circuito. De esta manera, la corriente del circuito fluye a través de los circuitos del multímetro digital. Se puede emplear un método de medida de corriente indirecto en un multímetro digital utilizando una sonda de corriente. La sonda se fija alrededor de la parte exterior del conductor, evitando de esta manera la apertura del circuito y la conexión del multímetro digital en serie.
+\begin{itemize}
+    \item[$1.$] Desconecte el suministro eléctrico al circuito.
+    \item[$2.$] Corte o retire las soldadurasdel circuito para tener espacio e insertar las sondas del multímetro.
+    \item[$3.$] Seleccione $A~$ ($CA$) o $A$ ($CC$) como desee.
+    \item[$4.$] Conecte la sonda de prueba negra en la entrada de clavija $COM$. Conecte la sonda de prueba roja en la entrada de clavija de amperios o miliamperios, según el valor de lectura previsto.
+    \item[$5.$] Conecte las puntas de las sondas al circuito en la ruptura, de forma que toda la corriente fluya a través del multímetro digital (conexión en serie).
+    \item[$6.$] Vuelva a activar el circuito.
+    \item[$7.$] Observe la lectura, asegurándose de tener en cuenta la unidad de medición.\\ \\
+\textbf{Nota: Si los cables de prueba se invierten para una medición de $CC$, se mostrará - en la pantalla.}
 
-\subsubsection{Citations}
-Because REV\TeX\ uses the \verb+natbib+ package of Patrick Daly, 
-the entire repertoire of commands in that package are available for your document;
-see the \verb+natbib+ documentation for further details. Please note that
-REV\TeX\ requires version 8.31a or later of \verb+natbib+.
+\subsubsection{Medición de tensión.}
+Una de las tareas más básicas de un multímetro digital es medir la tensión. Una fuente típica de tensión de $CC$ es una batería, como la que utiliza un coche. La tensión de $CA$ la crea normalmente un generador. Las tomas de electricidad de su casa son fuentes comunes de tensión de $CA$. Algunos dispositivos convierten la tensión de $CA$ en tensión de $CC$. Por ejemplo, los equipos electrónicos como televisores, equipos de música, vídeos y ordenadores que enchufa a una toma de pared de $CA$ utilizan dispositivos denominados rectificadores para convertir la tensión de $CA$ en tensión de $CC$. Esta tensión de $CC$ es la que alimente los circuitos electrónicos de estos dispositivos. Probar el correcto suministro de tensión es normalmente el primer paso a la hora de detectar averías en un circuito. Si no hay tensión o es demasiado alta o baja, el problema de tensión debe solucionarse antes de seguir investigando.\\
+\begin{itemize}
+    \item[$1.$] Seleccione $V~ (CA) o V (CC)$, como desee.
+    \item[$2.$] Conecte la sonda de prueba negra en la entrada de clavija $COM$. Conecte la sonda de prueba roja en la entrada de clavija $V$.
+    \item[$3.$] Si el multímetro digital dispone únicamente de selección de registros manual, seleccione el rango máximo posible de manera que no se produzca sobrecarga en la señal de entrada.
+    \item[$4.$] Ponga en contacto las puntas de las sondas a lo largo del circuito en carga o en la fuente de alimentación (en paralelo al circuito).
+    \item[$5.$] Observe la lectura, asegurándose de tener en cuenta la unidad de medición.\\ \\
+\textbf{Nota: lecturas de $CC$ con polaridad correcta, ponga en contacto la sonda de prueba roja con el lado positivo del circuito y la sonda negra con el lado negativo o conexión a tierra del circuito. Si invierte las conexiones, un multímetro digital con polaridad automática simplemente mostrará un signo menos, que indica la polaridad negativa. Si utiliza un multímetro analógico, podría dañarlo.
+$1/1000 V = 1 mV, 1000 V = 1 kV$
+Existen sondas de alta tensión disponibles para reparación de $TV$ y $CRT$, en cuyo caso las tensiones pueden alcanzar los 40 $kV$ Precaución: estas sondas no están diseñadas para aplicaciones eléctricas en las que la alta tensión está acompañada de alta energía. En cambio, están diseñadas para utilizarse en aplicaciones de baja energía.
+}
+\end{itemize}
 
-\paragraph{Syntax}
-The argument of \verb+\cite+ may be a single \emph{key}, 
-or may consist of a comma-separated list of keys.
-The citation \emph{key} may contain 
-letters, numbers, the dash (-) character, or the period (.) character. 
-New with natbib 8.3 is an extension to the syntax that allows for 
-a star (*) form and two optional arguments on the citation key itself.
-The syntax of the \verb+\cite+ command is thus (informally stated)
-\begin{quotation}\flushleft\leftskip1em
-\verb+\cite+ \verb+{+ \emph{key} \verb+}+, or\\
-\verb+\cite+ \verb+{+ \emph{optarg+key} \verb+}+, or\\
-\verb+\cite+ \verb+{+ \emph{optarg+key} \verb+,+ \emph{optarg+key}\ldots \verb+}+,
-\end{quotation}\noindent
-where \emph{optarg+key} signifies 
-\begin{quotation}\flushleft\leftskip1em
-\emph{key}, or\\
-\texttt{*}\emph{key}, or\\
-\texttt{[}\emph{pre}\texttt{]}\emph{key}, or\\
-\texttt{[}\emph{pre}\texttt{]}\texttt{[}\emph{post}\texttt{]}\emph{key}, or even\\
-\texttt{*}\texttt{[}\emph{pre}\texttt{]}\texttt{[}\emph{post}\texttt{]}\emph{key}.
-\end{quotation}\noindent
-where \emph{pre} and \emph{post} is whatever text you wish to place 
-at the beginning and end, respectively, of the bibliographic reference
-(see Ref.~[\onlinecite{witten2001}] and the two under Ref.~[\onlinecite{feyn54}]).
-(Keep in mind that no automatic space or punctuation is applied.)
-It is highly recommended that you put the entire \emph{pre} or \emph{post} portion 
-within its own set of braces, for example: 
-\verb+\cite+ \verb+{+ \texttt{[} \verb+{+\emph{text}\verb+}+\texttt{]}\emph{key}\verb+}+.
-The extra set of braces will keep \LaTeX\ out of trouble if your \emph{text} contains the comma (,) character.
+\end{itemize}
+\section{\label{sec:level1}Desarrolo y análisis de resultados.}
+\subsubsection{Reconocimiento de un multímetro.}
+\begin{itemize}
+    \item[$1.1$] ¿Cuál es la marca y el modelo del multímetro que estás utilizando?\\
+    PeakTech 2005. (Figura 1)
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.2\textwidth]{fig1.jpg}
+        \caption \\ Multímetro marca PeakTech.
+        \label{fig1}
+    \end{figure}
+    
+    \item[$1.2$] ¿Qué debe hacer para encender el multímetro?\\
+    Presionar el botón de Power.
+    \item[$1.3$] ¿Cuántas posiciones y cuáles son los rangos del multímetro para medir voltajes de corriente directa($v dc$)?\\
+    Son 5: 200mv, 	2v-1000v.
+    \item[$1.4$] ¿Cuántas posiciones y cuáles son los rangos del multímetro para medir corrientes de ($cd y ca$)?\\
+    Son 4: 20A, 20mA, 200mA, 2mA, 2000mA.
+    \item[$1.5$] ¿Cuántos y cuáles son los rangos del multímetro para medir resistencias ($ohms$)?\\
+    Son 7:
+    \begin{itemize}
+        \item 200 $\Omega$
+        \item 2000 $\Omega$
+        \item 20000 $\Omega$
+        \item 2000000 $\Omega$
+        \item 20000000 $\Omega$
+        \item 200000000 $\Omega$
+        \item 2000000000 $\Omega$
+    \end{itemize}
+    \item[$1.6$] ¿Qué otras funciones, interruptores y selectores tiene el multímetro que estás usando?\\
+    Sirve para medir hertz, para corroborar si hay continuidad en un circuito eléctrico, para donde esta la base ,la tierra y el neutro, medir capacitancia.
+\end{itemize}
 
-The star (*) modifier to the \emph{key} signifies that the reference is to be 
-merged with the previous reference into a single bibliographic entry, 
-a common idiom in APS and AIP articles (see below, Ref.~[\onlinecite{epr}]). 
-When references are merged in this way, they are separated by a semicolon instead of 
-the period (full stop) that would otherwise appear.
 
-\paragraph{Eliding repeated information}
-When a reference is merged, some of its fields may be elided: for example, 
-when the author matches that of the previous reference, it is omitted. 
-If both author and journal match, both are omitted.
-If the journal matches, but the author does not, the journal is replaced by \emph{ibid.},
-as exemplified by Ref.~[\onlinecite{epr}]. 
-These rules embody common editorial practice in APS and AIP journals and will only
-be in effect if the markup features of the APS and AIP Bib\TeX\ styles is employed.
+\subsubsection{Mediciones de resistencia (óhmetro).}
+\begin{itemize}
+    \item[$2.1$] Encienda el multímetro y coloque la perilla en ohms.
+    \item[$2.2$] Anote los valores utilizando el código de colores para resistencias. (Figura 2)
 
-\paragraph{The options of the cite command itself}
-Please note that optional arguments to the \emph{key} change the reference in the bibliography, 
-not the citation in the body of the document. 
-For the latter, use the optional arguments of the \verb+\cite+ command itself:
-\verb+\cite+ \texttt{*}\allowbreak
-\texttt{[}\emph{pre-cite}\texttt{]}\allowbreak
-\texttt{[}\emph{post-cite}\texttt{]}\allowbreak
-\verb+{+\emph{key-list}\verb+}+.
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.45\textwidth]{codigo-colores-resistencias.jpg}
+        \caption \\ Código de colores para resistencias.
+        \label{fig2}
+    \end{figure}
+\newpage
+
+    \item[$2.3$] Mida las resistencias proporcionadas y anote el valor obtenido en la tabla. (Figura 3)
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.15\textwidth]{fig3.jpg}
+        \caption \\ Medición de resistencia
+        \label{fig3}
+    \end{figure}
+    
+    \item[$2.4$] Compare el valor nominal con el valor medido.
+    
+    \begin{table}[h!]
+        \centering
+        \resizebox{10cm}{!}{
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Resistencia}&\textbf{ColorsE}&\textbf{Tolerancia}&\textbf{Valor nominal(ohms)}&\textbf{Valor medido(ohms)}\\
+        \hline 
+        1&N-N-R-D &$5\%$ &$3.3 K\Omega$ & $3.3 K\Omega$ \\
+        \hline
+        2&Am-C-R-D &$5\%$ &$4.7 K\Omega$ & $4.64 K\Omega$ \\
+        \hline
+        3&N-B-R-D &$5\%$ &$3.9 K\Omega$ & $3.85 K\Omega$ \\
+        \hline
+        4&G-R-R-D &$5\%$ &$8.2 K\Omega$ & $8.03 K\Omega$ \\
+        \hline
+        5&C-G-R-D &$5\%$ &$1.8 K\Omega$ & $1.77 K\Omega$ \\
+        \hline
+        6&Az-G-R-D &$5\%$ &$6.8 K\Omega$ & $6.77 K\Omega$ \\
+        \hline
+        \end{tabular}
+        }
+        \caption*{Valores nominales y medidos.}
+        \label{tab:my_label}
+    \end{table}
+    
+    
+    
+
+\end{itemize}
+
+
+\subsubsection{Mediciones de continuidad.}
+\begin{itemize}
+    \item[$3.1$] Utilizando el medidor de continuidad (buzzer) o en la escala de resitencia más baja identifique como está constituido un protoboard, dispositivo frecuentemente utilizado en la electrónica para elaborar circuitos sencillos de las aplicaciones estudiadas. (Figura 4)
+    
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.15\textwidth]{continuidad.jpg}
+        \caption \\ Prueba de continuidad.
+        \label{fig4}
+    \end{figure}
+    
+\end{itemize}
+
+
+\subsubsection{Medición de voltaje (voltímetro).}
+\begin{itemize}
+    \item[$4.1$]Se midió el voltaje de dos pilas con el multímetro (Figura 5), en la pila 1 el voltaje que tenía era de $6.3 v$, no se sabía el valor teórico al principio, pero esta pila era de$ 6.5 v$, la segunda pila que se midió era de $1.5 v$ pero ya haciendo la medición salió de $1.3 v$.\
+    \item[$4.2$]Posteriormente se uso una fuente de alimentación, se localizo la polaridad y la salida de corriente directa, se hicieron tres medidas a $15v,2v,20v$ colocando la  perilla donde decía dicha cantidad pero ahora de medir con el multímetro salieron $14.7v,1.7v, 18,3v$ respectivamente y en ninguna de las dos mediciones coincidió el voltaje teórico o que decían los materiales.(Figura 6)
+    
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.25\textwidth]{baterias.jpg}
+        \caption \\ Medición del voltaje de las pilas.
+        \label{fig5}
+    \end{figure}
+    
+    
+        \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.25\textwidth]{regulada.jpg}
+        \caption \\ Medición con fuente regulada,
+        \label{fig6}
+    \end{figure}
+    
+    \end{itemize}
+\newpage
+\subsubsection{Mediciones de voltaje de corriente alterna(vóltmetro).}
+\begin{itemize}
+    \item[$5.1$] Ubique un contacto como el mostrado en la figura en su mesa de trabajo.
+    \item[$5.2$] Mida el voltaje entre salidas y anote su valor.(Figuras 7 y 8). \\
+    \textbf{    $V_1_2 = 130 V$} \\
+    \textbf{    $V_1_3 = 0 V$} \\
+    \textbf{    $V_2_3 = 123 V$}
+    
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.20\textwidth]{cerocero.jpg}
+        \caption \\ Voltaje entre salidas. $(V_1_3$)
+        \label{fig7}
+    \end{figure}
+    
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.20\textwidth]{undostres.jpg}
+        \caption \\ Voltaje entre salidas. $(V_2_3$)
+        \label{fig8}
+    \end{figure}
+    
+    \item[$5.3$] Identifique en el contacto cual es la fase, el neutro y la tierra física. \\ \\ 
+    Al ser una toma de una sola fase una de las salidas tendrá lo que será el potencial eléctrico medido en volts que regularmente es de 120 V y otra de las salidas será la parte neutra y la tercera salida que siempre esta abajo será la tierra física. Y al medirlo nos percatamos que la salida 2 es la que tenía la corriente eléctrica y la 1 era la salida neutra.
+\end{itemize}
+
+\subsubsection{Mediciones de intensidad de corriente eléctrica continua(amperímetro).}
+\begin{itemize}
+    \item[$6.1$] Arme el siguiente circuito. (Figura 9)
+    
+     \begin{figure}[h!]
+        \centering
+        \includegraphics[width=0.20\textwidth]{Serie.jpg}
+        \caption \\ Circuito en serie.
+        \label{fig9}
+    \end{figure}
+    
+     \item[$6.2$] Seleccione la escala de medición adecuada y el selector de cd/ca colóquelo en cd.
+     \item[$6.3$] Mida la corriente.\\ \\
+     \textbf{Valor medido experimentalmente = } $l_c_d$ = $10.31 mA$ \\
+    
+     
+     \item[$6.4$] Calcule el valor teórico de la corriente del circuito y compare con el valor medido, saque sus conclusiones. \\ \\
+     \textbf{Valor teórico = } $10 mA$ \\ \\ 
+     El valor teórico calculado por la formula en diferencia con el valor medido experimentalmente puesto que debido a la tolerancia de la resistencia este va a afectar al valor teórico. Puesto que el valor teórico no se aplica con la tolerancia de la resistencia de $+/- 5 \%$ de la resistencia total. AsÍ esto nos va a dar un valor un poco diferente del valor real.
+     
+    
+\end{itemize}
+
+\newpage
+\section{\label{sec:level1} Observaciones.}
+\begin{itemize}
+
+    \item \textbf{CARLOS GIL VALERIA } \\
+    El multímetro (digital) contiene un mando rotatorio, alrededor de este mando indica los rangos para voltajes, corrientes u resistencia; contiene cuatro puertos en la parte frontal con ohm V (para voltajes y resistencias, mA (para medir en miliamperios), 20 (para medir en amperios) estos tres puertos son para el cale en punta roja) y por ultimo COM para la punta negra.  Enseguida el protoboard está constituida por cuatro columnas, dos en cada extremo y una es de polaridad positiva y otra negativa (por cierto, llamadas buses), en los contactos está formado por tres partes tierra, positivo y neutro.
+  
+    \item \textbf{GONZÁLEZ ARACÉN YAEL MAGDIEL} \\
+    En esta práctica no hubo muchos inconvenientes, debido a que algunos de los integrantes del equipo ya tenían conocimientos previos acerca del uso y funcionamiento del multímetro. Solo tuvimos un poco de confusión al no saber con exactitud qué cables debíamos de conectar hacia el multímetro. Otro pequeño problema que tuvimos fue el no considerar el multímetro dentro del circuito en serie al querer medir la intensidad de corriente y que estábamos midiendo en unidades más grandes de las que necesitábamos. 
+
+    \item \textbf{MEJORADO LÓPEZ JONATHAN} \\
+    En el desarrollo experimental de esta practica se pudo observar la diferencia entre un multímetro analógico y un multímetro digital, en lo personal fue un poco mas complicado comprender los rangos y la utilización del analógico puesto que varían mucho en los rangos. El multímetro analógico solo media voltajes, resistencias y amperaje mientras que el multímetro digital aparte de tener estas mediciones también contiene las mediciones de capacitancia en faradios y de inductores las cuales en electrónica son muy útiles al momento de hacer circuitos electrónicos. También se observó e identificamos los rangos de las resistencias y la variación que estas pueden tener debido  a la tolerancia que marque su cuarta banda la cual va  a hacer que difiera del valor teórico, haciendo así que en los circuitos también difieran los resultados.
+
+
+    \item \textbf{LÓPEZ CANALES IVÁN SALVADOR} \\
+    En todos los experimentos nos dimos cuenta que se necesitaba poner mucha atención a las unidades, ya que el riesgo de hacer una medición con otra unidad en el multímetro, tenía el riesgo de descomponerlo o también si no se ponía en las unidades correctas con respecto a su escala, el multímetro no podía ni siquiera hacer la medición , como si no estuviera conectado o prendido, también vimos que no hay mucha diferencía entre usar el multímetro analógico y el digital, mas que en el rango de medición.
+
+    \item \textbf{ROMERO MÉNDEZ JESÚS ESAÚ} \\
+    El uso de este artefacto en la práctica fue un tanto de gran facilidad, debido a que contábamos con conocimientos previos, por lo que casi no tuvimos conflictos, en lo único que demoramos fue en algo muy simple pero que causaba confusión es en el momento de la conexión de los cables hacia el multímetro ya que para la medición de corriente tendríamos que ponerlos en uno de los puertos que marcaba ahí pero midiendo en otro tipo de unidades se tenían que cambiar de lugar si no, no hubiésemos obtenido los resultados correctos. En todo lo demás estuvo bien, en mi punto de vista fue algo complicado obtener los valores nominales ya que no tuve conocimiento previo acerca de ello.
+    
+\end{itemize}
+
+\section{\label{sec:level1} Conclusiones.}
+\begin{itemize}
+    \item \textbf{BARRAGÁN VALDÉZ ALAN DANIEL} \\
+    En esta práctica desarrollamos diferentes mediciones con el multímetro, primero teníamos que saber cómo usarlo, saber los rangos del multímetro para medir voltajes directos.
+    Pero nos damos cuenta que realizar este tipo de experimentos nos ayuda a identificarnos más con la carrera de ICE pues en esta al principio tenemos una cierta idea de que es la carrera, pero hasta que llegamos al momento de prácticas y proyectos nos damos cuenta que en realidad es un como más complejo de lo que teníamos como idea principal.
+    En las corrientes y voltajes tenemos que tener muy en claro que la electricidad no es un juego pues se corren grandes riesgos, pero también debemos saber cómo interactuar con esta, pues si se hace con miedo la práctica también puede que se cometa un error fatal al momento de ejecutarla.
+    
+    \item \textbf{CARLOS GIL VALERIA } \\
+    Con respecto a lo visto, analizado los resultados de esta práctica y vinculando el marco teórico llego a la conclusión de que un multímetro sirve para medir resistencias (la cual se mide en ohmio), voltajes en corrientes alternas, indico a si mismo que un ejemplo claro de esta corriente son las conexiones (entre sus integrantes la tierra sirve de protección a las personas y el neutro es para dar un cierre del circuito), y directa, en consecuencia, un ejemplo serán las pilas/baterías y finalmente el multímetro es de utilidad para medir la intensidad dela corriente eléctrica en la cual el amperímetro debe estar conectado en serie al protoboard y esta se basa de la ley de ohm. 
+    
+    
+    \item \textbf{GONZÁLEZ ARACÉN YAEL MAGDIEL} \\
+    Actualmente, en nuestra vida cotidiana usamos una gran cantidad de aparatos electrónicos, se podría decir que, en esta época, no podríamos vivir sin dichos artículos. Estos dispositivos están conformados por distintos componentes que funcionan gracias a las cargas eléctricas que llegan a ellos a través de conductores, a esto se le llama potencial eléctrico. El multímetro es un instrumento que nos sirve para medir lo anterior, y no solo eso, también otras magnitudes dentro de un circuito eléctrico como la resistencia, tensión, intensidad, capacitancia, frecuencia, etc. De igual forma, el multímetro tiene otras funciones como determinar si en el circuito hay o no hay continuidad. Dicho esto, y con la practica realizada, nos podemos dar cuenta de la gran importancia que tiene el uso multímetro para facilitarnos el trabajo con la electricidad en distintos ámbitos, ya sea en la industria, en el hogar o en la escuela.
+    
+    \item \textbf{MEJORADO LÓPEZ JONATHAN} \\
+    Finalizando podemos decir que las mediciones teóricas siempre van a ser un valor aproximado, puesto que debido a la diferente tolerancia de cada uno de los elementos de los circuitos van a hacer que estos tengan un cierto porcentaje de error que estará bien siempre y cuando quede dentro del rango especificado de acuerdo a los parámetros establecidos. También concluyo que las líneas que comúnmente usamos tanto en nuestras casas, oficinas y/o escuelas, etc. Siempre van a tener una sola conexión de fase que alimentara 120 v mientras su otra conexión será la parte neutra, en cambio de las conexiones de industrias o aires acondicionados por mencionar algunos que utilizan dos líneas de 110 a 120 dando así un voltaje de 220 a 240 v aproximadamente. A su vez debemos siempre tomar en cuenta que la utilización del multímetro debe ser con mucha precisión ya que este podría tener desperfectos si no colocamos en los valores de medición correctos, y tomar en cuenta que estamos midiendo, ya sea corriente alterna o corriente directa.
+    
+    \item \textbf{LÓPEZ CANALES IVÁN SALVADOR} \\
+    Nuestro entorno está rodeado de cargas eléctricas, y estas pueden ser medidas si se adaptan al medio con ayuda de distintos conductores eléctricos, como es el caso del diferencial de potencial eléctrico, que se puede medir si hay dos puntos conectados mediante un conductor y si hay un flujo de carga eléctrica también hay una corriente eléctrica; con la ayuda de un multímetro podemos medir las magnitudes eléctricas o incluso saber en dónde las hay y puede haber continuidad ; Un multímetro es un instrumento eléctrico internamente formado por componentes que permiten la medición de dichas magnitudes, pero en esta práctica nos dimos cuenta que también tiene una escala y distintas funciones muy específicas porque si no se respetan o se usa como se debe, se puede llegar a descomponer, a veces porque la magnitud que quieres medir es mucho mayor a la que colocas en la escala o porque estas generando un corto circuito, también nos percatamos de que los instrumentos a veces usados o las escalas señaladas para poner un cierto voltaje, no sirven del todo bien y esto genera un margen de error al hacer una comparación entre lo teórico y lo práctico.
+    
+    \item \textbf{ROMERO MÉNDEZ JESÚS ESAÚ} \\
+    En cualquier lugar que estemos en el que tenga que hacerse presente la intervención de un multímetro es sumamente importante que conozcamos lo básico de él, porque nunca se sabe cuándo puede ser de bastante ayuda usar un aparato de este tipo, en la vida laboral en el caso de las fabricas es donde puede verse mucho ya que normalmente esos tipos de lugares es en donde deben de checar constantemente la corriente, voltaje y amperaje de las maquinas con las que están trabajando para que no sufran después algún tipo de incidente. La tecnología siempre estará evolucionando hasta que se acaben los recursos del planeta, es por eso que diseñan mucho este tipo de aparatos para hacer de mayor facilidad la vida al ser humano. En algunas ocasiones resultan exitoso porque este por ejemplo ayuda a no tener algún tipo de accidente con el recurso que tenemos llamado energía, es peligroso, por eso es de gran ayuda en este aspecto. Así que hay que aprovechar las buenas ideas que son expresadas.
+    
+\end{itemize}
+
+
+\section{\label{sec:level1} BIBLIOGRAFÍA.}
+    \textsc{Fluke} \textit{Multímetros digitales de Fluke: Soluciones para cada necesidad.}, Fluke Corporation, Países Bajos, 2014. \\ \\
+    \textsc{Fluke} \textit{Conceptos básicos de los multímetros digitales: Explicación de las características y funciones de un multímetro .}, Fluke Corporation, Madrid, 2014.
+
+     
+
 
 \end{document}
-%
-% ****** End of file apssamp.tex ******
